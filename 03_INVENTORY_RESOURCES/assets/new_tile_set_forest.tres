@@ -1,0 +1,80 @@
+[gd_resource type="TileSet" format=3 uid="uid://b24cvcb8uy13m"]
+
+[ext_resource type="Texture2D" uid="uid://vvq2w82y7pu" path="res://assets/sprite.png" id="1_hh58l"]
+[ext_resource type="PackedScene" uid="uid://cnwd1rv6xndax" path="res://scenes/mushrooms.tscn" id="2_jq07i"]
+[ext_resource type="PackedScene" uid="uid://vsdpxhupmlq6" path="res://scenes/tree.tscn" id="3_1doam"]
+[ext_resource type="PackedScene" uid="uid://c5jeslg0jqsrr" path="res://scenes/camp.tscn" id="3_253id"]
+[ext_resource type="Texture2D" uid="uid://dkpj6scrmwsdy" path="res://assets/MyIconsAutumn.png" id="4_253id"]
+[ext_resource type="PackedScene" uid="uid://bbthimknty0el" path="res://scenes/Lit.tscn" id="4_lwsd3"]
+[ext_resource type="PackedScene" uid="uid://c7evmlquf3fdf" path="res://scenes/acorn.tscn" id="6_lwsd3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yhocn"]
+texture = ExtResource("1_hh58l")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+3:1/0 = 0
+0:1/0 = 0
+1:1/size_in_atlas = Vector2i(2, 1)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -1.7985859, -9.802301, -1.6187286, -13.039759, 7.5540676, 11.960606, 7.5540676)
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_y5twn"]
+scenes/2/scene = ExtResource("2_jq07i")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_56xm0"]
+scenes/1/scene = ExtResource("3_1doam")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_pyi8q"]
+scenes/1/scene = ExtResource("4_lwsd3")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_1doam"]
+scenes/1/scene = ExtResource("3_253id")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5twn"]
+texture = ExtResource("4_253id")
+margins = Vector2i(2, 0)
+separation = Vector2i(0, 1)
+3:0/0 = 0
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.3633575, 8, -8, 8, -8, 4.5504246, -8, 1.3849125, -8, -2.8687477, -8, -8, 4.352583, -8, 8, -8, 8, -3.6601257, 8, 0.29676628, 8, 2.9676685, 8, 5.935337, 8, 6.429949, 8, 8, 8, 8)
+0:1/size_in_atlas = Vector2i(2, 1)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.6601238, 3.6601238, -0.6924553, 4.2536583, -5.3418026, 5.7374935, -6.1331825, 4.1547356, -8, 4.5504246, -14.24481, 2.9676685, -13.651277, -2.4730587, -8, -4.748271, 1.582758, -3.8579702, 4.352583, -5.2428827, 6.429949, -3.4622803, 8, -3.6601257, 8, 0.29676628, 9.892229, 2.5719795, 8, 5.935337, 6.429949, 3.6601238, 3.4622822, 4.2536583, 5.2428837, 4.74827, 0.59353447, 4.6493473)
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1doam"]
+texture = ExtResource("4_253id")
+0:2/size_in_atlas = Vector2i(2, 2)
+0:2/next_alternative_id = 2
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.090075, 8.21055, -5.539648, 9.595463, -4.6493473, 3.4622803, -2.5719795, 3.4622803, -2.374134, 9.991152, 3.4622822, 4.9461136, 12.8598995, 5.3418026, 13.25559, 13.156664, -11.474985, 13.354509, -13.156665, 11.079296)
+0:2/1 = 1
+2:1/0 = 0
+2:2/size_in_atlas = Vector2i(1, 2)
+2:2/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_b83su"]
+scenes/1/scene = ExtResource("6_lwsd3")
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_yhocn")
+sources/1 = SubResource("TileSetScenesCollectionSource_y5twn")
+sources/2 = SubResource("TileSetScenesCollectionSource_1doam")
+sources/7 = SubResource("TileSetAtlasSource_y5twn")
+sources/8 = SubResource("TileSetAtlasSource_1doam")
+sources/9 = SubResource("TileSetScenesCollectionSource_b83su")
+sources/10 = SubResource("TileSetScenesCollectionSource_56xm0")
+sources/11 = SubResource("TileSetScenesCollectionSource_pyi8q")

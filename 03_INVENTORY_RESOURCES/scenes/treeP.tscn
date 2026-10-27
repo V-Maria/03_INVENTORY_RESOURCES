@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bbpjdn8tsrgiv"]
+
+[ext_resource type="Script" uid="uid://fd63yy0hv8vb" path="res://script/treeP.gd" id="1_xh8ud"]
+[ext_resource type="Texture2D" uid="uid://vvq2w82y7pu" path="res://assets/sprite.png" id="2_evd6l"]
+[ext_resource type="Resource" uid="uid://bymmqyvnsqpv0" path="res://resources/wood.tres" id="2_hskgv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdvjf"]
+atlas = ExtResource("2_evd6l")
+region = Rect2(39, 7, 9, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_16vmr"]
+radius = 6.0827627
+
+[node name="treeP" type="Node2D" unique_id=2103809822]
+script = ExtResource("1_xh8ud")
+item_resources = ExtResource("2_hskgv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1265205591]
+texture = SubResource("AtlasTexture_cdvjf")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1553402068]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1206433194]
+shape = SubResource("CircleShape2D_16vmr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

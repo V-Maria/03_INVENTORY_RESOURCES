@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://vsdpxhupmlq6"]
+
+[ext_resource type="Texture2D" uid="uid://dkpj6scrmwsdy" path="res://assets/MyIconsAutumn.png" id="1_avsvi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vplca"]
+atlas = ExtResource("1_avsvi")
+region = Rect2(50, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viusy"]
+atlas = ExtResource("1_avsvi")
+region = Rect2(66, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd6xs"]
+atlas = ExtResource("1_avsvi")
+region = Rect2(50, 34, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ake3r"]
+atlas = ExtResource("1_avsvi")
+region = Rect2(66, 34, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sek5r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vplca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_viusy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd6xs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ake3r")
+}],
+"loop": 1,
+"name": &"new_animation_1",
+"speed": 5.0
+}]
+
+[node name="tree" type="CharacterBody2D" unique_id=1496919653]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=451207961]
+sprite_frames = SubResource("SpriteFrames_sek5r")
+animation = &"new_animation_1"
+autoplay = "new_animation_1"
+frame_progress = 0.48412615

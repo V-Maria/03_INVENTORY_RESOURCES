@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://de1jf7xeagigd"]
+
+[ext_resource type="Texture2D" uid="uid://c5qto10pwmhpj" path="res://assets/sprite1.png" id="1_4dvvg"]
+[ext_resource type="Script" uid="uid://b2fgq4qfeo3qm" path="res://script/control.gd" id="1_rnjyy"]
+[ext_resource type="FontFile" uid="uid://drp10mx3rqhhs" path="res://assets/ComicoroRu_0.ttf" id="2_rnjyy"]
+
+[sub_resource type="Theme" id="Theme_njqwk"]
+default_font = ExtResource("2_rnjyy")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f2x3"]
+atlas = ExtResource("1_4dvvg")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wi6ju"]
+texture = SubResource("AtlasTexture_7f2x3")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1lj4"]
+atlas = ExtResource("1_4dvvg")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13qdw"]
+texture = SubResource("AtlasTexture_b1lj4")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16vmr"]
+atlas = ExtResource("1_4dvvg")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cdvjf"]
+texture = SubResource("AtlasTexture_16vmr")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="Theme" id="Theme_cdvjf"]
+default_font = ExtResource("2_rnjyy")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_13qdw")
+TextEdit/styles/normal = SubResource("StyleBoxTexture_cdvjf")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5nam"]
+atlas = ExtResource("1_4dvvg")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nfbfs"]
+texture = SubResource("AtlasTexture_c5nam")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvy0b"]
+atlas = ExtResource("1_4dvvg")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8bkq3"]
+texture = SubResource("AtlasTexture_bvy0b")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="Theme" id="Theme_6b6u5"]
+default_font = ExtResource("2_rnjyy")
+Button/styles/hover = SubResource("StyleBoxTexture_nfbfs")
+Button/styles/normal = SubResource("StyleBoxTexture_8bkq3")
+
+[sub_resource type="Theme" id="Theme_8bkq3"]
+default_font = ExtResource("2_rnjyy")
+
+[node name="Control" type="Control" unique_id=1519230076]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rnjyy")
+
+[node name="Control" type="Control" parent="." unique_id=198810323]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backround" type="ColorRect" parent="Control" unique_id=982420534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.047552265, 0.26144457, 0.31726834, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=606652677]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 11.0
+offset_right = 174.0
+offset_bottom = 113.0
+
+[node name="NameInput" type="LineEdit" parent="Control/MarginContainer" unique_id=393295683]
+custom_maximum_size = Vector2(50, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_njqwk")
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("2_rnjyy")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi6ju")
+
+[node name="Label" type="Label" parent="Control/MarginContainer" unique_id=50296667]
+custom_maximum_size = Vector2(26, -1)
+layout_mode = 2
+theme = SubResource("Theme_cdvjf")
+text = "name:"
+
+[node name="StartButton" type="Button" parent="Control/MarginContainer" unique_id=1029481239]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = SubResource("Theme_6b6u5")
+text = "Начать"
+
+[node name="ErrorLabel" type="Label" parent="Control/MarginContainer" unique_id=1207925139]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource("Theme_8bkq3")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bbthimknty0el"]
+
+[ext_resource type="Texture2D" uid="uid://dkpj6scrmwsdy" path="res://assets/MyIconsAutumn.png" id="1_7nxrc"]
+[ext_resource type="Texture2D" uid="uid://yyk8ac7fqsdn" path="res://assets/light.png" id="2_66e5l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrivr"]
+atlas = ExtResource("1_7nxrc")
+region = Rect2(36, 37, 10, 29)
+
+[node name="Lit" type="CharacterBody2D" unique_id=1496919653]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=277295458]
+texture = SubResource("AtlasTexture_xrivr")
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D" unique_id=2113149260]
+position = Vector2(0, -6)
+scale = Vector2(0.78125, 0.4375)
+energy = 1.43
+texture = ExtResource("2_66e5l")
+texture_scale = 1.16
+height = 61.0

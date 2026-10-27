@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://b76akk7m7f21c"]
+
+[ext_resource type="Script" uid="uid://w80s5kcfaqh2" path="res://script/new_script.gd" id="1_3rqpm"]
+[ext_resource type="Texture2D" uid="uid://bghbhv0rnpoo2" path="res://assets/player.png" id="1_tnwmu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cdvjf"]
+radius = 3.1622777
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rqpm"]
+atlas = ExtResource("1_tnwmu")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbklp"]
+atlas = ExtResource("1_tnwmu")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uw3e"]
+atlas = ExtResource("1_tnwmu")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqn7k"]
+atlas = ExtResource("1_tnwmu")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_563ah"]
+atlas = ExtResource("1_tnwmu")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abvt3"]
+atlas = ExtResource("1_tnwmu")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdvjf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rqpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbklp")
+}],
+"loop": 1,
+"name": &"sit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uw3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqn7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_563ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abvt3")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Scena" type="CharacterBody2D" unique_id=1371307175 node_paths=PackedStringArray("anim")]
+position = Vector2(-15, -9)
+script = ExtResource("1_3rqpm")
+anim = NodePath("AnimatedSprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1226302407]
+position = Vector2(15, 9)
+shape = SubResource("CircleShape2D_cdvjf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=654910677]
+position = Vector2(15, 10)
+zoom = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1717621770]
+position = Vector2(15.000008, 9)
+sprite_frames = SubResource("SpriteFrames_cdvjf")
+animation = &"walk"

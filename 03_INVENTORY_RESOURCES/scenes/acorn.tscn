@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c7evmlquf3fdf"]
+
+[ext_resource type="Script" uid="uid://5htyprhcm6sf" path="res://script/area_3d.gd" id="1_gl1pk"]
+[ext_resource type="Texture2D" uid="uid://dkpj6scrmwsdy" path="res://assets/MyIconsAutumn.png" id="2_xwt5n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc30l"]
+atlas = ExtResource("2_xwt5n")
+region = Rect2(4, 4, 7, 9)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cdvjf"]
+radius = 8.0
+
+[node name="acorn" type="Node2D" unique_id=567974111]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1508585973]
+texture = SubResource("AtlasTexture_nc30l")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=563504351]
+script = ExtResource("1_gl1pk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1713083124]
+shape = SubResource("CircleShape2D_cdvjf")

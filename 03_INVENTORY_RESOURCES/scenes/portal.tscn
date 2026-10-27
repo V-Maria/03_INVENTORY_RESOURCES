@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://2fhui1481ecu"]
+
+[ext_resource type="Script" uid="uid://c4wr0w63sv0dr" path="res://script/portal.gd" id="1_1ffj6"]
+[ext_resource type="Texture2D" uid="uid://d2vgkp2xo2d1g" path="res://assets/port-Photoroom.png" id="2_jr6l0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13qdw"]
+atlas = ExtResource("2_jr6l0")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(25, 42)
+
+[node name="Portal" type="Area2D" unique_id=1489590240]
+script = ExtResource("1_1ffj6")
+target_scene = "uid://dwde8fkxcsym2"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1462029694]
+scale = Vector2(1.6111112, 1.888889)
+texture = SubResource("AtlasTexture_13qdw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2122731946]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_xrivr")
